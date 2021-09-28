@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Kunth And Structured Documentation</title>
+  </head>
+  <body style="background-color:#F8F4E7;">
+    <table>
+      <tr>
+
+      <td><img src="https://www-cs-faculty.stanford.edu/~knuth/cweb.jpeg" alt="">
+</td>
+<td><h1><br> The CWEB System of Structured Documentation </h1></td>
+
+      </tr>
+    </table>
+
+  <p>by Donald E. Knuth and Silvio Levy (Reading, Massachusetts: Addison-Wesley, 1993), iv+227pp. <br>
+  ISBN 0-201-57569-8 </p>
+
+<p><b>The third printing (Spring 2001) has a spiffy new cover and greatly improved pages inside, featuring the latest extensions for hypertext!</b>Look for ``Version 3.6'' on the cover. <br>
+<tt>WEB</tt>  is a software system that facilitates the creation of readable programs. It was originally developed by Donald E. Knuth as he wrote the TeX typesetting system. Users of WEB are able to</p>
+<ul>
+  <li>Write programs of superior quality;</li>
+  <li>Produce state-of-the-art documentation;</li>
+<li>Greatly reduce debugging time;</li>
+<li>Maintain programs easily as conditions change.</li>
+
+</ul>
+<p>The main idea is to regard a program as a communication to human beings rather than as a set of instructions to a computer. Your program is also viewed as a hypertext document, rather like the World Wide Web. (Indeed, Knuth used the word WEB for this purpose long before CERN grabbed it!)</p>
+<p>CWEB is a version of WEB for documenting C, C++, and Java programs. WEB was adapted to C by Silvio Levy in 1987, and since then both Knuth and Levy have revised and enhanced the system in many ways, notably to support C++ and ANSI C. Thus CWEB combines TeX with today's most widely used professional programming languages.</p>
+<p>If you are in the software industry and do not use CWEB but your competitors do, your competitors will soon overtake you---and you'll miss out on a lot of fun besides.</p>
+<p>More comments about CWEB can be found in<a href="http://www.literateprogramming.com/"> Daniel Mall's website for Literate Programming.</a> See also <a href="http://webpages.charter.net/edreamleo/front.html">Leo,</a> Edward K. Ream's Python-based outlining-editor/browser compatible with CWEB and other literate programming tools.</p>
+This book is the definitive user's guide and reference manual for the CWEB system. The CWEB software itself is freely available via anonymous ftp from ftp.cs.stanford.edu, in directory ~ftp/pub/cweb. It consists of two programs:
+<dl>
+  <dt><tt>CTANGLE</tt></dt>
+  <dd>converts a source file foo.w to a compilable program file foo.c;</dd>
+  <dt> <tt>CWEAVE</tt> </dt>
+  <dd>converts a source file foo.w to a prettily-printable and cross-indexed document file foo.tex.</dd>
+
+</dl>
+<p>Both CTANGLE and CWEAVE are stable, well-tested, and highly portable. They have been installed on a wide variety of computers and operating systems.</p>
+<a href="ftp://ftp.cs.stanford.edu/pub/cweb/cweb.tar.gz">download my latest version of cweb.tar.gz</a> (but see below for CWEB 4.0)
+
+<p>An electronic form of this book comes free with the CWEB system, but the printed version costs less than the price of laserprinting and has a nice cover and binding. Unfortunately it's now out of print, but you might be able to buy a cheap used copy.</p>
+<h2>Errata</h2>
+<p>Known errors in CWEB or its documentation have always been corrected immediately in the online version. Only a few trivial bugs in the programs have been found since Version 3.4 was released in April 1995, except that many of the more recent features of C++ were not properly supported. Version 3.6 corrects these flaws and adds important new capabilities related to PDF files (Adobe Portable Document Files for the Acrobat reader). Version 3.64 improves the latter capabilities.</p>
+<p>If your program worked with Version 3.4 but is formatted strangely with Version 3.6, the probable cause is that you have used identifiers that became reserved keywords in the latest C++. For example, the identifiers `and', `compl', `not', `or', `xor', and `not_eq' are now reserved; also 'bool' is predeclared. The cure is to put a line like this near the beginning of your .w file:</p>
+<blockquote >
+  @s not_eq normal
+</blockquote>
+
+<p>It tells CWEAVE to format not_eq as a normal identifier, not as a relational operator.</p>
+<p>The authors do not intend to change CWEB henceforth unless some devastating new bug is discovered. Non-catastrophic infelicities should therefore be considered permanent features of CWEB.</p>
+<h2>Hyperdocumentation</h2>
+<p>Version 3.61 of CWEB introduced cool new features with which you can weave programs in PDF format with clickable links, and these features have been refined in version 3.64. In fact, the new software gives you two ways to proceed, either with standard TeX together with Mark A. Wicks's program dvipdfm, or with an extension of TeX called pdfTeX. Instructions on how to use these features are explained in the current CWEB manual and examples appear in the Makefile.</p>
+<p>Note for those who like gory details: Version 3.63 --- vintage 2001 --- was almost as good as 3.64; but it didn't handle LaTeX and Acrobat simultaneously, and it didn't do nearly as good a job when making the bookmarks for an Acrobat file. Most of the changes between 3.63 and 3.64 occur in the file cwebmac.tex, which contains some very instructive TeX macros.)</p>
+<h3>CWEB 4.0</h3>
+<p>People have been accumulating several decades of experience with CWEB, and I know that CTANGLE and CWEAVE work reasonably well on numerous platforms. In general those programs are now entirely stable: I won't be changing them any more, because they've proved their value in extensive use. (Henceforth I must devote full time to <a href="The art of computer programing.html">The Art of Computer Programming!</a>)</p>
+<p>However, further significant developments, including versions that I myself do not maintain, are ongoing. All of the really current news about CWEB is, in fact, now to be found in the CWEB development project, thanks to the tireless activities of Andreas Scherer.</p>
+<p>The first new release under his auspices incorporates the majority of material from his CWEBbin project, namely all the patches accumulated over many years, and all the changes for ANSI-C. What's left in CWEBbin are a few extensions used in TeX Live:</p>
+<ul>
+  <li>includes CTWILL and its utilities</li>
+  <li>internationalization with the “GNU gettext utilities”</li>
+  <li>output is only written when different from the former run</li>
+  <li>new options -l, -i, and -o for CWEAVE and CTWILL</li>
+  <li>file lookup with the kpathsea library (TeX Live only)</li>
+  <p>and it provides tools to bundle packages for various target systems.</p>
+
+</ul>
+
+<h2>Related books</h2>
+<p>The philosophy of literate programming is explained fully in the book <a href="https://www-cs-faculty.stanford.edu/~knuth/lp.html">Literate Programming,</a> which also contains an extensive bibliography of the subject. More than 30 example CWEB programs can be found in The <a href="https://www-cs-faculty.stanford.edu/~knuth/sgb.html"> Stanford GraphBase;</a> ten more are in <a href="https://www-cs-faculty.stanford.edu/~knuth/sgb.html">MMIXware.</a> And I've made several additional <a href="https://www-cs-faculty.stanford.edu/~knuth/programs.html">programs available for downloading.</a>
+
+</p>
+<img src="https://www-cs-faculty.stanford.edu/~knuth/border.gif" alt="">
+<h3><img src="https://www-cs-faculty.stanford.edu/~knuth/dontiny.gif" alt=""align= center> &nbsp;<a href="index.html">Don Knuth's home page</a></h3>
+<h3><img src="https://www-cs-faculty.stanford.edu/~knuth/dbend.gif" alt="" align="center">&nbsp;<a href="http://www.msri.org/people/staff/levy/">Silvio Levy's home page</a></h3>
+<h3><img src="https://www-cs-faculty.stanford.edu/~knuth/dontiny.gif" alt=""align="center">&nbsp;<a href="https://www-cs-faculty.stanford.edu/~knuth/books.html">Don Knuth's other books</a></h3>
+<a href="https://validator.w3.org/check?uri=referer">
+  <img src="http://www.w3.org/Icons/valid-html401" alt="" align="right">
+</a>
+</body>
+</html>
