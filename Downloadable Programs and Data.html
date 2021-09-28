@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Knuth:Programs</title>
+  </head>
+  <body style="background-color:#F8F4E7;">
+    <h1><img src="https://www-cs-faculty.stanford.edu/~knuth/donsmall.gif" alt="">&nbsp;Programs to Read</h1>
+    <p>I write lots of CWEB programs, primarily for my own edification. If there is sufficient interest, I'll make a large subset of them available via the Internet. For now, I'm listing only a few. The first one was used as a handout for a lecture on literate programming that I once gave at Frys Electronics in Sunnyvale. The next two show (by quite different methods) that exactly 2,432,932 knight's tours are unchanged by 180-degree rotation of the chessboard. The fourth was used to compute some of the tables in Axioms and Hulls that several people have asked about. The fifth was used in one of my otherwise unpublished lectures in the Computer Musings series. The next few were requested by members of the Academy of Recreational Mathematicians in Japan. And so on.
+
+</p>
+Note: Many of my programs, including the first two samples, use the conventions and library of The Stanford GraphBase.
+<dl>
+  <dt>HWTIME</dt>
+  <dt>Brief demonstration of CWEB: "Hello, world" plus time (October 1992)</dt>
+<dt>SHAM
+</dt>
+<dd>Enumerates symmetrical Hamiltonian cycles (December 1992)</dd>
+<dt>OBDD</dt>
+<dd>Enumerates perfect matchings of bipartite graphs (May 1996)</dd>
+<dt>REFLECT; also a change file for REFLECT</dt>
+<dd>Enumerates equivalence classes of reflection networks, aka CC systems (January 1991)</dd>
+<dt>HULL, HULLS, HULLT, HULLTR</dt>
+<dd>Programs used as examples in Axioms and Hulls; also change files for ngons, square deletion, and uniform input distribution</dd>
+<dt>TCALC</dt>
+<dd>Interactively calculates with humungous numbers (December 1994)</dd>
+<dt>DECAGON; also a change file for DECAGON (stars); also a change file for DECAGON (color); also a change file for DECAGON (color stars)</dt>
+<dd>Packs golden triangles into decagons, stars, pentagons, etc. (September 1994)</dd>
+<dt>ANTISLIDE; also a change file for ANTISLIDE</dt>
+<dd>Finds solutions to Strijbos's antisliding block puzzle (November 1994)</dd>
+<dt>ANTISLIDE3</dt>
+<dd>Improved version of ANTISLIDE, finds all nonisomorphic solutions (December 1996)</dd>
+<dt>SETSET</dt>
+<dd>Enumerates nonisomorphic unplayable hands in the game of SET® (February 2001</dd>
+<dt>SETSET-ALL</dt>
+<dd>Improvement of SETSET---fifty times faster---when a huge automorphism group is considered (March 2001)</dd>
+  <dt>SETSET-RANDOM</dt>
+  <dd>Simple Monte Carlo routine to validate the previous two programs (March 2001)</dd>
+<dt>SLIDING</dt>
+  <dd>
+Finds solutions to sliding block puzzles (November 2001; revised January 2009 and September 2020)</dd>
+<dt>STRAIGHTEN</dt>
+<dd>Computes irreducible matrix representations of permutations (August 2003)</dd>
+<dt>DOMINATION</dt>
+<dd>Computes the covering relation for an interesting partial ordering of multiset permutations (August 2003)</dd>
+<dt>FOG2MF</dt>
+<dd>Rudimentary conversion from Fontographer to METAFONT (August 1996)</dd>
+<dt>LAGFIB</dt>
+<dd>
+Calculator of weights related to the random number generator below (July 1997)</dd>
+<dt>GARSIA-WACHS</dt>
+<dd>Simple implementation of Algorithm 6.2.2G (January 1998, revised September 2004)</dd>
+<dt>HALFTONE</dt>
+<dd>Preprocessor for typeset halftones; also example input files lisa-64, lisa-rot, lisa-128, lin-64, lin-rot, lin-128, lib-64, lib-rot, lib-128 (June 1998)</dd>
+<dt>DOT-DIFF</dt>
+<dd>
+Preprocessor for halftones by dot diffusion; also an example input file lisa-512, and a change file for EPS output (June 1998)</dd>
+<dt>TOGPAP</dt>
+<dd>
+Generates examples of halftones for paper P116 on dot diffusion (June 1998)</dd>
+<dt>LINKED-TREES</dt>
+<dd>An amazingly short program to generate linked trees with given node degrees (March 2005)
+</dd>
+<dt>VACILLATE</dt>
+<dd>A program to experiment with set partitions and vacillating tableau loops (May 2005)</dd>
+<dt>EMBED</dt>
+<dd>
+An algorithm of Hagauer, Imrich, and Klavžar to embed a median graph in a hypercube (June 2005)</dd>
+<dt>
+An algorithm of Hagauer, Imrich, and Klavžar to embed a median graph in a hypercube (June 2005</dt>
+<dd>An expository implementation of linear programming (August 2005)</dd>
+<dt>HORN-COUNT</dt>
+<dd>A program to enumerate Horn functions; also a change file krom-count.ch, which adapts it to Krom functions (aka 2SAT instances) (August 2005)</dd>
+<dt>BOOLCHAINS</dt>
+<dd>
+A suite of programs that find the complexity of almost all Boolean functions of five variables (December 2005)</dd>
+<dt>FCHAINS4X and and a change file for don't-cares</dt>
+<dd>Programs for interactive minimization of multiple-output 4-input Boolean functions using the `greedy footprint' method (February 2006, revised October 2010</dd>
+<dt>TICTACTOE, a gzipped tar file tictactoe.tgz</dt>
+<dd>Various programs used when preparing the tic-tac-toe examples in Section 7.1.2 (March 2006)/dd>
+<dt>HWB-FAST</dt>
+<dd>
+Short program to compute the profile of the hidden weight function, given a permutation of the variables (April 2008)</dd>
+<dt>YPLAY</dt>
+<dd>Simple program to play with Schensted's Y function (April 2008)/dd>
+<dt>BDD12</dt>
+<dd>A program to find the best and worst variable orderings for a given BDD (May 2008)
+</dd>
+<dt>SAT0</dt>
+  <dd>My implementation of Algorithm 7.2.2.2A (very basic SAT solver)</dd>
+<dt>SAT0W</dt>
+<dd>My implementation of Algorithm 7.2.2.2B (teeny tiny SAT solver)</dd>
+<dt>SAT8</dt>
+<dd>My implementation of Algorithm 7.2.2.2W (WalkSAT)</dd>
+<dt>SAT9</dt>
+<dd>My implementation of Algorithm 7.2.2.2S (survey propagation SAT solver)</dd>
+<dt>SAT10</dt>
+<dd>My implementation of Algorithm 7.2.2.2D (Davis-Putnam SAT solver)</dd>
+<dt>SAT11</dt>
+<dd>My implementation of Algorithm 7.2.2.2L (lookahead 3SAT solver)</dd>
+<dt>DLX5</dt>
+<dd>Algorithm 7.2.2.1C$, the extension to min-cost covers (July 2018)</dd>
+<dt>DLX6</dt>
+<dd>Algorithm 7.2.2.1Z, "dancing with ZDDs" (February 2019)</dd>
+<dt>DLX6-NOMRV</dt>
+<dd>a change file that branches on items in strictly left-to-right order</dd>
+<dt>SSXC</dt>
+<dd>an experimental rewrite of DLX1, using sparse-set data structures instead of dancing links (July 2020)</dd>
+<dt>MATULA-BIG and MATULA-BIG-PLANTED</dt>
+  <dd>Change files for MATULA allowing large trees in rectree format (May 2021)</dd>
+<dt>MATULA-EXHAUSTIVE</dt>
+<dd>Change file for MATULA that tests all m-trees against all n-trees (May 2021)</dd>
+<dt>TCHOUKAILLON-ARRAYS</dt>
+<dd>Generates some fascinating numerical patterns (June 2021)</dd>
+<dt>OFFLINE-TREE-INSERTION</dt>
+<dd>Tarjan's efficient solution to a new exercise about binary tree insertion (September 2021)</dd>
+<dt>FLOORPLAN-TO-TWINTREE, TWINTREE-TO-BAXTER, BAXTER-TO-FLOORPLAN</dt>
+<dd>A trilogy of interesting bijections between floorplans, twin trees, and Baxter permutations (September 2021)</dd>
+
+
+</dl>
+<img src="https://www-cs-faculty.stanford.edu/~knuth/border.gif" alt="">
+<p>Programs in languages other than CWEB:</p>
+<dl>
+  <dt>RANARRAY</dt>
+  <dd>Portable random number generator recommended in Seminumerical Algorithms, 3rd edition, new and improved version (last updated November 2002)</dd>
+  <ul>
+    <li><a href="#">C version, int (corrected September 2019 to agree with TAOCP)</a></li>
+    <li><a href="#">C version, double</a></li>
+    <li><a href="#">FORTRAN version, INTEGER (corrected September 2019 to agree with the C version)</a></li>
+    <li><a href="#">FORTRAN version, DOUBLE PRECISION (corrected August 2012 to agree with the C version)</a></li>
+  </ul>
+
+</dl>
+<dl>
+  <dt><a href="#">ptpk.i</a></dt>
+  <dd>The TPK algorithm in INTERCAL (version of November 2010); also some sample input and its corresponding output</dd>
+  <dt><a href="#">SGBFIG</a></dt>
+  <dd>MetaPost sources for the illustrations in The Stanford GraphBase (1994)</dd>
+  <dt><a href="#">color-mode.e</a></dt>
+  <dd>An experimental line-oriented color mode for Emacs (August 2000)<br><img src="https://www-cs-faculty.stanford.edu/~knuth/screen.gif" alt=""><img src="https://www-cs-faculty.stanford.edu/~knuth/screen.gif" alt=""></dd>
+<dt>Sample Fvwm2 Config File</dt>
+<dd>The emacs-oriented desktop layouts I use on my home computer to write books; these also need icons zero.xpm, one.xpm, two.xpm, three.xpm (May 2000, updated December 2007)</dd>
+<dt><a href="#">my6x13.bdf and my6x13B.bdf</a></dt>
+<dd>TeX-oriented bitmap fonts that I use for text editing with emacs</dd>
+<dt><tt><a href="#">DonKeys.keylayout and DonKeysExtended.keylayout</a></tt></dt>
+<dd>Custom keyboards for my Macintoshes -- more logical and efficient because they switch () with [], also + with = (April 2005); use them with DonKeys.icns and DonKeysExtended.icns</dd>
+<dt><tt><a href="#">texmf-sail.tgz</a></tt></dt>
+<dd>source code listings for the first implementations of TeX and METAFONT (late 1970s)</dd>
+<dt><tt><a href="#">tex.web</a></tt></dt>
+<dd>TeX version -0.25 as it existed when I gave twelve lectures on the internal details of TeX82 in July 1982</dd>
+<dt><tt><a href="#">matulatree.m</a></tt></dt>
+<dd>Mathematica code to generate Matula trees in rectree format (May 2021)</dd>
+<dt><tt><a href="#">randomfreetree.m
+</a></tt></dt>
+<dd>Mathematica code to generate a random free tree in rectree format (May 2021)</dd>
+
+</dl>
+
+
+<img src="https://www-cs-faculty.stanford.edu/~knuth/border.gif" alt="">
+<p>Datasets for exercises in <cite>The Art of Computer Programming:</cite></p>
+<dl>
+  <dt><tt><a href="#">wordlists.tgz</a></tt></dt>
+  <dd>English words of lengths 2 thru 12 [OSPD4], ordered by frequency</dd>
+
+
+</dl>
+<img src="https://www-cs-faculty.stanford.edu/~knuth/border.gif" alt="">
+<h3><img src="https://www-cs-faculty.stanford.edu/~knuth/dontiny.gif" alt=""align="center">&nbsp; &nbsp;<a href="index.html">Don Knuth's home page</a> </h3>
+<a href="http://www.w3.org/Icons/valid-html401">
+  <img src="http://www.w3.org/Icons/valid-html401" alt=""align="right">
+</a>
+
+
+  </body>
+</html>

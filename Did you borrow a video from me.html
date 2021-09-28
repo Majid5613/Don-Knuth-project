@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Knuth:Recent News</title>
+  </head>
+  <body style="background-color:#F8F4E7;">
+    <h1><img src="https://www-cs-faculty.stanford.edu/~knuth/donsmall.gif" alt="">&nbsp;Recent News</h1>
+    <p><a href="https://www-cs-faculty.stanford.edu/~knuth/news03.html#lectures">[click here to zip down to the schedule of public lectures]</a></p>
+<h2>New versions of TeX and METAFONT</h2>
+<p>The first upgrade to TeX since 1995 has just been released, together with the first upgrade to METAFONT since 1998 ... namely, TeX Version 3.141592 and METAFONT Version 2.71828.</p>
+<p>I have, of course, promised to keep these programs stable, never introducing any new features. But when bugs are found, I do my best to make the programs converge to an error-free state.</p>
+<p>So what has changed? Well, four things are different in the new TeX: Two of them are related to ``leaders,'' and two to ``alignments.'' None of the changes affect in any way TeX's logic for breaking paragraphs into lines, or breaking lines into pages; the only difference is that certain uses of leaders will result in more sensible numbers of boxes that turn out to be visible in the leader space. (More precisely, \xleaders used to drop the final box, incorrectly, in some cases where the boxes fit rather tightly in the available space; ordinary \leaders used to behave somewhat more capriciously in cases where the edges of the leaders came very close to the underlying ``grid'' of boxes. The first problem is cured by correcting a faulty algorithm for deciding when to stop placing boxes. The second problem is cured by using more care when rounding the quantities that determine the edges of glue and leaders.) The two changes with respect to alignments are merely designed to rule out certain weird hacks that a devilish user could formerly use to confuse TeX, but that nobody would conceivably need in any reasonable application.</p>
+<p>METAFONT 2.71828 differs from METAFONT 2.7182 only in that autorounding is suppressed in cases where a path has coordinates that exceed half the maximum legal size. Such paths don't benefit significantly from autorounding anyway; therefore it isn't worthwhile to correct the problems that might arise when certain internal transformations fail to be monotonic on such large numbers.</p>
+<p>A few small changes have been made to the Computer Modern fonts, too, but they are almost invisible. (A small bump was removed from the top of the "7" in fonts cmbx5 and cmbx6; a small bug could occur in the "breve" accent at certain sizes on printers with nonuniform aspect ratio.) None of the characters changed in any way that would affect TeX's placement algorithms.</p>
+<p>The moral is: Everybody who distributes TeX systems should prepare updates to their releases, as soon as possible. But ordinary users can wait until they get a brand new system (a new computer, say) before bothering to upgrade, unless they are heavily into \leadership.
+
+</p>
+<h2>Previews of Volume 4</h2>
+<p>I've been making some headway at last on actually writing Volume 4 of The Art of Computer Programming instead of merely preparing to write it, and some first drafts are now ready for beta-testing. I've put them online primarily so that experts in the field can help me check the results, but brave souls who aren't afraid to look at relatively raw copy are welcome to look too. (Yes, the usual rewards apply if you find any mistakes.)</p>
+<ul>
+  <li><a href="#">Pre-Fascicle 2a: Generating all $n$-tuples</a>(version of 29 Aug 2003)</li>
+  <li><a href="#">Pre-Fascicle 2b: Generating all permutations </a>(version of 29 Aug 2003)</li>
+  <li><a href="#">Pre-Fascicle 2c: Generating all combinations </a>(version of 04 Nov 2003)</li>
+</ul>
+<p>(If you have trouble downloading these files, your browser is probably screwing up; please see my FAQ page for a workaround.)</p>
+<p>(Truly hardy adventurers may also wish to hunt for a sneak preview of the next few pages.)</p>
+<p><b>If you have previously downloaded a pre-fascicle dated prior to 29 August 2003, I recommend that you upgrade to the current version.</b>The main reason is that I've decided to change the terminology used for ``Gray codes'', which were formerly restricted to cases where the sequence is cyclic (with the last element adjacent to the first). Such things are now called ``Gray cycles'', and the term ``Gray code'' is used to mean either a Gray cycle or a Gray path. This change brings my terminology into line with common usage.</p>
+<p>Note to Internet friends: I'm extremely grateful that hundreds of you have taken time to read these drafts, and to detect and report errors that you've found. Your comments have improved the material enormously. But I must confess that I'm also disappointed to have had absolutely no feedback so far on several of the exercises on which I worked hardest when I was preparing this material. Could it be that (1) you've said nothing about them because I somehow managed to get the details perfect? Or is it that (2) you shy away from the more difficult stuff, being unable to spend more than a few minutes on any particular topic? Although I do not like to think that readers are lazy, I fear that hypothesis (1) is far less likely than hypothesis (2). I may have to remove material that nobody cares about. Thus I would like to enter here a plea for some readers to tell me explicitly, ``Dear Don, I have read exercise N and its answer very carefully, and I believe that it is 100% correct,'' where N is one of the following:</p>
+<ul>
+  <li>7.2.1.1--96 (analysis of a coroutine-based algorithm)</li>
+  <li>7.2.1.1--98 (decoding a recursively generated de Bruijn cycle)</li>
+  <li>7.2.1.2--6 (analysis of lexicographic permutation generation for multisets)</li>
+  <li>7.2.1.2--7 (asymptotics of multiset permutation generation)</li>
+  <li>7.2.1.2--43 (a Sims table with only short cycles)</li>
+<li>7.2.1.2--75 (enumeration of northeasterly knight's tours)</li>
+<li>7.2.1.3--25 (proof of van Zanten's theorem)</li>
+<li>7.2.1.3--33 (enumeration of genlex listings for index lists)</li>
+<li>7.2.1.3--42 (analysis of an algorithm for near-perfect combination generation)</li>
+<li>7.2.1.3--62 (minimal-change algorithm for contingency tables)</li>
+  <li>7.2.1.3--92 (synchronized standard </li>
+<li>7.2.1.3--93 (counterexample when hypotheses are violated)
+</li>
+<li>7.2.1.3--100 (the heaviest multicomplexes)</li>
+<li>7.2.1.3--109 (universal cycles of 3-combinations with repetitions)</li>
+
+
+</ul>
+<p>Note that you don't have to work the exercise first; you're allowed and even encouraged to peek at the answer. Please send success reports to the usual address for bug reports (taocp@cs.stanford.edu), if you have time to provide this extra help. Thanks in advance!</p>
+<h2>A contribution to INTERCAL</h2>
+<p>Sooner or later every true hacker discovers the INTERCAL programming language, introduced by Don Woods and Jim Lyon, and I got hooked too. (See TPK in INTERCAL.)</p>
+<h2>Food for Thought</h2>
+<p>The best things in life are free; but the lyrics to that song are not yet in the public domain.</p>
+<h2>New Books</h2>
+<p>Hurray, hurray, I just received my first copies of two books that give me great pleasure (and I hope some readers will agree): Selected Papers on Computer Languages and Selected Papers on Discrete Mathematics. Many thanks to my coauthors and to everyone else who helped make these books possible. [Reward-hunters please note that your chances for being first to find an error and gain $2.56 will never be better.]</p>
+<p>And my Things book has just appeared in its spiffy new paperback edition, correcting all the mistakes that were noticed in the hardcover printing of 2001.</p>
+<h2>Diamond Signs</h2>
+<p>During our summer vacation this year, my wife and I amused ourselves by taking leisurely drives in Ohio and photographing every diamond-shaped highway sign that we saw along the roadsides. (Well, not every sign; only the distinct ones.) For provenance, I also stood at the base of each sign and measured its GPS coordinates.</p>
+<p>This turned out to be even more fun than a scavenger hunt, so we filled in some gaps when we returned to California. And we intend to keep adding to this collection as we drive further, although we realize that we may have to venture to New England in order to see `FROST HEAVES</p>
+<p>Here are the images of our collection so far.</p>
+<h2>Did you borrow a video from me?</h2>
+<p>Videotapes of most of my Computer Musings have been made since 1998, and I have often loaned copies to people who were unable to attend in person.</p>
+<p>Now there is good news and bad news. The good news is that nearly a dozen of these videos have been digitized, and they are available for viewing. The bad news is that three people have not returned the tapes they borrowed, and there is no backup copy; I learned recently that my copy was unique, because all the master tapes were erased. If you are the person who currently has any of the following tapes:</p>
+<ul>
+  <li>Twisted toruses (or: tori, tori, tori), from 10 May 2001;</li>
+<li>Totally acyclic digraphs (spiders) and how to squish them, from 06 Dec 2001;</li>
+  <li>Topological sorting revisited, from 23 Apr 2002;</li>
+</ul>
+<p>please PLEASE return it/them immediately.</p>
+<h2>Crisis in Scientific Publishing</h2>
+<p>For several years I've become more and more concerned about the fact that libraries are increasingly unable to afford the prices being charged by commercial publishers of scientific journals. In October I wrote a long letter to the editorial board of the Journal of Algorithms, explaining the current state of affairs as comprehensively and accurately as I could. Several people involved with other editorial boards have asked to see a copy of this letter, so I'm now posting it here in hopes that it will be helpful to anybody else who is trying to deal with this serious problem.</p>
+<h2>Public lectures</h2>
+<p>Although I must stay home most of the time and work on books that I've promised to complete, I do occasionally get into speaking mode. Here is a current schedule of events that have been planned for this year so far:</p>
+<dl>
+  <dt>Sunday 19 January, 9am, at First Lutheran Church of Palo Alto,</dt>
+  <dd>informal discussion of the Bible verse 1 Samuel 3:16</dd>
+  <dt>Friday 14 February, 4:15pm, in Gates room B01</dt>
+<dd>A Computer Musing lecture entitled ``Ramanujan's cool proof of Bertrand's postulate''</dd>
+<dt>Sunday 30 March, 9am, at First Lutheran Church of Palo Alto,</dt>
+<dd>informal discussion of the Bible verse John 3:16</dd>
+<dt>Easter Sunday, 20 April, 10:30am</dt>
+<dd>Playing the organ at First Lutheran Church of Palo Alto, in a performance of Vaughan Williams's Five Mystical Songs</dd>
+  <dt>Tuesday, 16 December, 4:15pm, in Gates room B01</dt>
+  <dd>A Computer Musing lecture entitled ``Finding all spanning trees'' (the tenth annual Christmas Tree Lecture)</dd>
+  </dl>
+  <hr>
+  <p>Click here for the ``recent news'' that was current at the end of 2002, if you're interested in old news as well as new news.</p>
+
+<h3><img src="https://www-cs-faculty.stanford.edu/~knuth/dontiny.gif" alt=""align="center" >&nbsp;&nbsp;<a href="index.html">Don Knuth's home page</a></h3>
+<a href="http://validator.w3.org/check?uri=referer">
+  <img src="https://www-cs-faculty.stanford.edu/~knuth/checked.gif" alt="" align="right">
+</a>
+
+
+
+
+
+
+  </body>
+</html>
